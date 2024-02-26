@@ -12,7 +12,7 @@ const Content = ({blogs}: ContentProps): JSX.Element => {
     return (
         <Box width={{xs: "100%", md: "70%"}}>
             {blogs.map(item => (
-                <Box key={item.image} onClick={() => router.push(`/blog/${item.slug}`)} sx={{cursor: 'pointer', backgroundColor: 'rgba(0,0,0,.5)', padding: '20px', marginTop: '20px', borderRadius: '8px', boxShadow: "8px 8px 16px rgba(255,255,255,.1)"}}>
+                <Box key={item.image.url} onClick={() => router.push(`/blog/${item.slug}`)} sx={{cursor: 'pointer', backgroundColor: 'rgba(0,0,0,.5)', padding: '20px', marginTop: '20px', borderRadius: '8px', boxShadow: "8px 8px 16px rgba(255,255,255,.1)"}}>
                     <Box position={"relative"} width={"100%"} height={{xs: '30vh', md: '50vh'}}>
                         <Image src={item.image.url} alt={item.title} fill style={{objectFit: 'cover'}} />
                     </Box>
